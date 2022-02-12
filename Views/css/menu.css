@@ -1,0 +1,311 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5/11/2021, 07:47:34 PM
+    Author     : Laura C
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+body{
+	background: #f5f6fa;
+}
+
+.IconoPeque{
+   /* width: px;*/
+    height: 50px;
+}
+.titulo{
+    color:white;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+.wrapper .sidebar{
+    margin-right: 10px;
+    
+
+    background-image:linear-gradient(-45deg, #7dcbf0, #0e5cb6 0% 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 300%;
+	padding: 5px ;
+	transition: all 0.5s ease;
+}
+ .wrapper .sidebar .profile{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.profile{
+    margin-top: 10px;
+}
+
+
+.wrapper .sidebar .profile i{
+    
+    font-size: 45px;
+	display: block;
+	width: 100px;
+
+    border-radius: 50%;
+	margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+	color: #ffffff;
+	margin: 10px 0 5px;
+}
+.wrapper .sidebar .profile p{
+	color: rgb(206, 240, 253);
+	font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 10px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+.wrapper .sidebar ul li a .icon{
+    font-size: 25px;
+	color: #ffffff;
+	width: 30px;
+	display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #0c7db1;
+	background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+    
+    
+}
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #0c7db1;
+    
+}
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 165px;
+	transition: all 0.5s ease;
+}
+.wrapper .section .top_navbar{
+    background-image: linear-gradient(45deg, #ffffff 100%, #28a9ff 0%);
+	height: 80px;
+	display: flex;
+	align-items: center;
+	padding: 0 0px;
+ 
+}
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #2085f8;
+}
+.wrapper .section .top_navbar .hamburger a:hover{
+	color: #000000;
+}
+
+ body.active .wrapper .sidebar{
+	left: -225px;
+}
+ body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.wrapper .buscar {
+    right: 900px;
+    float: right;
+	margin: auto;
+}
+.wrapper .buscar :hover{
+    cursor: hand;
+}
+.wrapper .buscar > div {
+    
+    
+	display: flex;
+	background:#fff;
+	padding: 1px 6%;
+	border-radius: 90px;
+	border:2px solid #cad3dc;
+	box-shadow: rgba(255, 255, 255, 0.5) -8px -8px 15px,
+		rgba(0, 0, 0, 0.1) 10px 10px 10px,
+		rgba(255, 255, 255, 0.5) -8px -8px 15px inset,
+		rgba(0, 0, 0, 0.1) 10px 10px 10px inset;
+}
+.wrapper .buscar input {
+    float: left ;
+	border:none;
+	background: transparent;
+	font-weight: bold;
+	padding-left: 24px;
+	background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+	background-size: 16px;
+	background-repeat: no-repeat;
+	width: 250px;
+	transition: all 1s;
+}
+
+.wrapper .buscar input {
+    cursor: pointer;
+}
+
+.wrapper .buscar input:focus {
+	outline: none;
+	width: 300px;
+    
+    
+}
+
+.logo{
+    width:4cm;
+     height:1.5cm;
+}
+.logo_name {
+
+    font-size: 55px;
+
+
+}
+
+@media (max-width:1200px){
+    
+    html{
+        font-size: 55%;
+
+
+    }
+
+
+}
+
+@media (max-width:991px){
+    
+    .wrapper .buscar input {
+        float: left ;
+        border:none;
+        background: transparent;
+        font-weight: bold;
+        padding-left: 24px;
+        background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        width: 80px;
+        transition: all 1s;
+    }
+
+    .wrapper .buscar input:focus {
+        outline: none;
+        width: 120px;
+    }
+
+    .logo_name {
+
+        font-size: 40px;
+    
+    }
+
+}
+
+@media (max-width:768px){
+
+    .wrapper .buscar input {
+        float: left ;
+        border:none;
+        background: transparent;
+        font-weight: bold;
+        padding-left: 24px;
+        background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        width: 70px;
+        transition: all 1s;
+    }
+
+    .wrapper .buscar input:focus {
+        outline: none;
+        width: 100px;
+
+    }
+    .logo_name {
+
+        font-size: 25px;
+    
+    }
+
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .wrapper .buscar input {
+        float: left ;
+        border:none;
+        background: transparent;
+        font-weight: bold;
+        padding-left: 24px;
+        background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+        background-size: 16px;
+        background-repeat: no-repeat;
+        width: 0px;
+        transition: all 1s;
+    }
+
+    .wrapper .buscar input:focus {
+        outline: none;
+        width: 90px;
+    }
+
+    .logo_name {
+
+        font-size: 8px;
+    
+    }
+
+}
+
+
+
+
+.contenido{
+
+padding-top: 30px;
+padding-left: 30px;
+}
