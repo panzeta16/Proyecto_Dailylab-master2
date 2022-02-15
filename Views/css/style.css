@@ -1,0 +1,128 @@
+:root {
+    --color-dark:  #ffffff;
+    --color-dark-x: #1a87e0;
+    --color-dark-xx: #ffffff98;
+    --color-light: #197cee;
+    --color-grey: #f5f6f8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+.Id_Rol{
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+
+
+}
+
+.seña{
+    height: 58px;
+    width: 40px;
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    border-radius: 50%;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+  .seña:hover{
+    cursor: pointer;
+    color: #197cee;
+
+
+  }
+  .error{
+
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    
+    border: 2px;
+    border-color: brown;
+    border-radius: 50%;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+
+
+
+.bg-light {
+    background-color: var(--color-light)!important;
+}
+
+.bg-dark {
+    background-color: var(--color-dark)!important;
+}
+
+.p-6 {
+    padding: 2rem 3rem;
+}
+
+.contact-box {
+    
+}
+
+.btn {
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border-radius: 5rem;
+    min-width: 10rem;
+    background:rgba(20, 140, 238, 0.856);
+}
+
+.btn-outline-dark {
+    border: 2px solid var(--color-light);
+}
+
+
+.form-control {
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-x);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.register-bg {
+    background-image: url("../multimedia/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.testiomonial {
+    bottom: 10px
+}
+
+@media (max-width: 575.98px) {
+    .p-6 {
+        padding: 2rem;
+    }
+
+
+
+    .width-100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .register-bg {
+        min-height: 50vh;
+    }
+}

@@ -1,193 +1,217 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="Views\css\loginyregistro.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="home">
-  <div class="container">
-    <div class="forms-container">
-      <div class="signin-signup">
-        <!--<form action="?c=usuario&a=validate" method="post"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Views\css\style.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+    <script src="views/js/jquery-3.6.0.min.js"></script>
+    <script src="views/js/registro.js"></script>
+    
 
-        <form action="?c=usuario&a=save" id="registro" method="post">
-        <a class="boton" id="sign-up-btn" href="?c=usuario&a=login2">
-              Inicia sesion
-            </a>
-          <h2 class="title"><b>Registrate</b></h2>
-
-          <label class="guia" for="Nombres_Usuario"><b>Nombre*</b></label>
-          <div class="input-field">
-
-            <i class="fas fa-user"></i>
-            <input name="Nombres_Usuario" id='Nombres_Usuario' type="text" maxlength="25" oninput="maxlengthNumber(this);"required />
-          </div>
-
-          <label class="guia" for="Apellidos_Usuario"><b>Apellido*</b></label>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input name="Apellidos_Usuario" id='Apellidos_Usuario' type="text" maxlength="25"  oninput="maxlengthNumber(this);" required />
-          </div>
-
-          <label class="guia" for="Documento_Identificacion"><b>Documento*</b></label>
-          <div class="input-field">
-            <i class="fas fa-id-card-alt"></i>
-            <input name="Documento_Identificacion" id='Documento_Identificacion' type="number" maxlength="10" oninput="maxlengthNumber(this);" required />
-          </div>
-
-
-          <label class="guia" for="Telefono_Usuario"><b>Telefono*</b></label>
-          <div class="input-field">
-            <i class="fas fa-phone-alt"></i>
-            <input name="Telefono_Usuario" id='Telefono_Usuario' type="number" maxlength="10" oninput="maxlengthNumber(this);" required />
-          </div>
-          <br>
-          <div id="msg"></div>
-          <br>
-
-          <h8><b>*</b>Si eres empleado o enfermer@ por favor digita el codigo de tu area
-            <br>
-            de lo contrario, no llenes este espacio
-          </h8>
-          <br>
-          <label class="guia" for="Id_Area"><b>Id Area</b></label>
-          <div class="input-field">
-            <i class="far fa-address-card"></i>
-            <input name="Id_Area" id='Id_Area' type="number" maxlength="4" oninput="maxlengthNumber(this);" required />
-          </div>
-          <br>
-          <script>
-            function maxlengthNumber(obj) {
-              if (obj.value.length > obj.maxLength) {
-                obj.value = obj.value.slice(0, obj.maxLength);
-              }
-            }
-          </script>
-          <label class="guia" for="Id_RH"><b>Selecciona tu RH*</b></label>
-          <div class="col-md-8">
-            <select name="Id_RH" id="Id_RH" class="selectpicker show-tick">
-              <option>Seleccione RH</option>
-              <?php foreach ($RH as $RHS) : ?>
-                <option value="<?= $RHS->getId_RH() ?>" <?= $RHS->getId_RH() == $usuario->getId_RH() ?
-                                                          'selected' : '' ?>>
-                  <?= $RHS->getTipo_RH() ?> </option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-          <br>
-          <label class="guia" for="Correo_Electronico"><b>Correo*</b></label>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input name="Correo_Electronico" id="Correo_Electronico" type="email" maxlength="40" oninput="maxlengthNumber(this);" required />
-          </div>
-
-          <label class="guia" for="Correo_Electronico2"><b>Confirma tu correo*</b></label>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input id="Correo_Electronico2" type="email" maxlength="40" oninput="maxlengthNumber(this);" required />
-          </div>
-          <label class="guia" for="Contrasena_Usuario">Contraseña* </label>
-          <section class="social-media">
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input name="Contrasena_Usuario" type="password" id="Contrasena_Usuario" placeholder="contrasena" maxlength="11" oninput="maxlengthNumber(this);" required />
+    <title>registro</title>
+  </head>
+  <body>
+   <section class="contact-box">
+       <div class="row no-gutters bg-dark">
+           <div class="col-xl-5 col-lg-10 register-bg">
+            <div class="position-absolute testiomonial p-4">
+                <img src="Views/multimedia/logo.png" width="450" class="my-4">
 
             </div>
-            <div class="seña"> 
+           </div>
+           <div class="col-xl-6 col-lg-10 d-flex">
+                <div class="container align-self-center p-9">
+                    <h1 class=" text-dark font-weight-bold mb-3">Registrate</h1>
+                    <div class="form-group">
+                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-google lead align-middle mr-2"></i> Google </button>
+                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i> Facebook</button>
+                    </div>
+                    
 
-<i  onclick="mostrar()" value="ver" class="fas fa-low-vision" ></i>
-
-
-</div>
-</section>
-
-          <label class="guia" for="Contrasena_Usuario2">Confirme Contraseña* </label>
-          <section class="social-media">
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" name="Contrasena_Usuario2" id="Contrasena_Usuario2" placeholder="contrasenaConfirm" maxlength="11" oninput="maxlengthNumber(this);" required> </input>
-
-            </div>
-
-            <div class="seña"> 
-
-          <i  onclick="mostrar2()" value="ver" class="fas fa-low-vision" ></i>
-
-
-          </div>
-          </section>
-          
-<!-- con esto se ve el ojito de la contraseña -->
-          <script  type="text/javascript">
-            function mostrar2(){
-    var tipo = document.getElementById("Contrasena_Usuario2");
-
-    if( tipo.type== 'password'){
-        tipo.type='text';
-    } else{
-        tipo.type ='password';
+                    <form action="?c=usuario&a=save" id="registro" method="post" >
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Nombre <span class="text-danger">*</span></label>
+                                <input name="Nombres_Usuario" id='Nombres_Usuario' type="text" maxlength="25" oninput="maxlengthNumber(this);"required  class="form-control" placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Apellido <span class="text-danger">*</span></label>
+                                <input name="Apellidos_Usuario" id='Apellidos_Usuario' type="text" maxlength="25"  oninput="maxlengthNumber(this);" required class="form-control" placeholder="Tu apellido">
+                            </div>
+                        </div>
 
 
-    }
-  }
-
-    function mostrar(){
-    var tipo = document.getElementById("Contrasena_Usuario");
-
-    if( tipo.type== 'password'){
-        tipo.type='text';
-    } else{
-        tipo.type ='password';
-
-
-    }
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Docuemento <span class="text-danger">*</span></label>
+                                <input name="Documento_Identificacion" id='Documento_Identificacion' type="number" maxlength="10" oninput="maxlengthNumber(this);" required class="form-control" placeholder="Tu Docuemnto">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Telefono <span class="text-danger">*</span></label>
+                                <input name="Telefono_Usuario" id='Telefono_Usuario' type="number" maxlength="10" oninput="maxlengthNumber(this);" required class="form-control" placeholder="Tu Telefono">
+                            </div>
+                        </div>
 
 
-}
-</script>
+                        <div class="form-row mb-2">
+                            <div class=" form-group col-md-6">
+                                
+                                    <label class=" text-dark form-check-label  ">Si eres empleado o enfermer@ por favor digita el codigo de tu area
+                                    
+                                    de lo contrario, no llenes este espacio</label>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">ID empleado <span class="text-danger"></span></label>
+                                <input name="Id_Area" id='Id_Area' type="number" maxlength="4" oninput="maxlengthNumber(this);"  class="form-control"  />
+                            </div>
+                        </div>
 
 
 
-          <br>
-          <label><input type="checkbox" id="Terminos" value="first_checkbox" required /> Acepto terminos y condiciones</label><br>
-          <input type="submit" onclick='return enviarFormulario();' id="login" class="btn solid" />
-          <div id="error"></div>
-          <script src='Views/js/registro.js'></script>
-          <p class="social-text">Siguenos en nuestras redes sociales</p>
-          <div class="social-media">
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </form>
-      </div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3> ¿Ya tienes una cuenta?</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
-            </p>
-            <a class="boton" id="sign-up-btn" href="./index.php?c=usuario&a=login">
-              Inicia sesion
-            </a>
-          </div>
-          <img src="Views/multimedia/logo.png" class="image" alt="" />
-        </div>
-      </div>
-    </div>
-    </form>
+                        <div class="form-row mb-2">
+                         
+                           
+                  
+                            
+                            <div class="form-group col-md-6" class="col-md-12">
+                              <select required class="form-control"  name="Id_Rol" id="Id_Rol" class="form-select" aria-label="Default select example">
+                                <option required >Seleccione Rol</option>
+                                <?php foreach ($roles as $rol) : ?>
+                                  <option value="<?= $rol->getId_Rol() ?>" <?= $rol->getId_Rol() == $usuario->getId_Rol() ?
+                                                                            'selected' : '' ?>>
+                                    <?= $rol->getNombre_Rol() ?> </option>
+                                <?php endforeach; ?>
+                              </select>
+                            </div>
+
+                            
+                            <div  class="form-group col-md-6" class="col-md-8">
+                              <select required class="form-control" name="Id_RH" id="Id_RH" class="selectpicker show-tick">
+                                <option required class="font-weight-bold" >Seleccione RH</option>
+                                <?php foreach ($RH as $RHS) : ?>
+                                  <option value="<?= $RHS->getId_RH() ?>" <?= $RHS->getId_RH() == $usuario->getId_RH() ?
+                                                                          'selected' : '' ?>>
+                                    <?= $RHS->getTipo_RH() ?> </option>
+                                <?php endforeach; ?>
+                              </select>
+                            </div>
+                            <br>
+                        </div>
+
+
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Correo <span class="text-danger">*</span></label>
+                                <input name="Correo_Electronico" id="Correo_Electronico" type="email" maxlength="40" oninput="maxlengthNumber(this);" required class="form-control" placeholder="Tu Correo">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Confirma tu Correo <span class="text-danger">*</span></label>
+                                <input id="Correo_Electronico2" type="email" maxlength="40" oninput="maxlengthNumber(this);" required class="form-control" placeholder="Confirma tu Correo">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row mb-2">
+
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Contraseña <span class="text-danger">*</span></label>
+                                <input name="Contrasena_Usuario" type="password" id="Contrasena_Usuario"  maxlength="13" oninput="maxlengthNumber(this);" required class="form-control" placeholder="Tu Contraseña">
+                                <span  id="mensaje"></span>
+
+                                <div class="seña"> 
+                                  <center>
+                           <i  onclick="mostrar()" value="ver" class="fas fa-low-vision" ></i>
+
+                           </center>
+                               </div>
+                                
+                            </div>
+
+
+                          
+
+                           
+                                
+
+                            <div class="form-group col-md-6">
+                                <label class=" text-dark font-weight-bold">Confirma tu Contraseña <span class="text-danger">*</span></label>
+                                <input type="password" name="Contrasena_Usuario2" id="Contrasena_Usuario2" maxlength="13"  oninput="maxlengthNumber(this);" required class="form-control" placeholder="Confirma tu Contraseña">
+                                <span id="mensaje"></span>
+                            
+                                <div class="seña"> 
+                               
+
+                                      <i  onclick="mostrar2()" value="ver" class="fas fa-low-vision" ></i>
+
+
+                                    </div>
+                            
+                              </div>
+
+                                <script  type="text/javascript">
+                                    function mostrar2(){
+                            var tipo = document.getElementById("Contrasena_Usuario2");
+                        
+                            if( tipo.type== 'password'){
+                                tipo.type='text';
+                            } else{
+                                tipo.type ='password';
+                        
+                        
+                            }
+                          }
+                        
+                            function mostrar(){
+                            var tipo = document.getElementById("Contrasena_Usuario");
+                        
+                            if( tipo.type== 'password'){
+                                tipo.type='text';
+                            } else{
+                                tipo.type ='password';
+                        
+                        
+                            }
+                        
+                        
+                        }
+                        </script>
+                        
+                        </div>
+ 
+                        <div class="form-group mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label class=" text-dark form-check-label  ">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los términos y condiciones</label>
+                            </div>
+                        </div>
+
+
+                       
+                        <input class="btn btn-primary width-100" type="submit" onclick='return enviarFormulario();' id="login" class="btn solid" />
+                        <div class="error" id="error"></div>
+                        <script src='Views/js/registro.js'></script>
+
+                    </form>
+                    <small class="d-inline-block text-dark mt-7">Dailylab| Colombia | © 2022 </small>
+                </div>
+           </div>
+       </div>
+   </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

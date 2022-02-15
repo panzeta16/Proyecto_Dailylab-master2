@@ -277,7 +277,7 @@ class CitasController
 
     $cita->agendarUnic();
 
-    header("location:?c=citas");
+    header("location:?c=citas&a=Menu");
   }
 
   function agendarPac() //proviene del metodo save

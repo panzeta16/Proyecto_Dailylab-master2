@@ -2,11 +2,11 @@
 
 class Database
 {
-    private static $server = 'localhost;port=3310';
+    private static $server = 'localhost;port=3306';
 
     private static $dbName = 'dailylab';
-    private static $dbUser = 'Proyecto';
-    private static $dbPass = '2184573Dailylab'; 
+    private static $dbUser = 'root';
+    private static $dbPass = ''; 
 
     public static function Connect()
     {

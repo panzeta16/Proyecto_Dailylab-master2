@@ -18,11 +18,12 @@ if(!isset($_SESSION['user'])){
   <link rel="stylesheet" href="Views/css/menu.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <script src="../js/vistas.js"></script>
 
 <!--jquery -->
 
@@ -65,15 +66,14 @@ if(!isset($_SESSION['user'])){
 
           <!--barra de busqueda -->
 
+
           <form autocomplete="on" class="buscar">
-            <div>
-              <input type="text" name="q" placeholder="Buscar">
-            </div>
+            
           </form>
 
            <!--logo -->
           <div class="logo_name">
-            <img class="logo" src="../Views/multimedia/logo.png" alt="" width="180" height="60" />
+            <img class="logo" src="Views/multimedia/logo.png" alt="" width="180" height="60" />
 
         </div>
 

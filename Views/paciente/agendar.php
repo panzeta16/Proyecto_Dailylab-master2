@@ -20,6 +20,9 @@
 </nav>
     </div>
 
+    <section class="contact-box">
+    <div class="row no-gutters ">
+
 <div class="container">
 <form action= "?c=citas&a=agendar" method ="post">
 <!--<form action= "?c=citas&a=saveAgendar" method ="post">
@@ -67,5 +70,7 @@
 <button type="submit" > Guardar</button>
 </form>
 </div>
+</div>
+</section>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <script src="/Views/js/vistas.js"></script>
 
 <!--jquery -->
 
@@ -55,9 +55,7 @@
           <!--barra de busqueda -->
 
           <form autocomplete="on" class="buscar">
-            <div>
-              <input type="text" name="q" placeholder="Buscar">
-            </div>
+            
           </form>
 
            <!--logo -->
