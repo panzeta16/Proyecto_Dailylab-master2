@@ -19,9 +19,9 @@ crossorigin="anonymous"></script>
             <label class="izq" for="password" >Ingresa tu Contraseña</label>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input name="Contrasena_Usuario" id="Contrasena_Usuario" type="password" placeholder="contrasena" maxlength="11" oninput="maxlengthNumber(this);" required/>
+              <input  name="Contrasena_Usuario" id="Contrasena_Usuario" type="password" placeholder="contrasena" maxlength="11" oninput="maxlengthNumber(this);" required/>
             </div>
-            <div class="seña"> 
+            <div class="icon"> 
 
 <i  onclick="mostrar()" value="ver" class="fas fa-low-vision" ></i>
 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- esto va en cada tabla-->
+    <link rel="stylesheet" href="Views/css/tablas.css">
 <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
 <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 <!-- esto va en cada tabla-->
@@ -32,18 +33,18 @@
 
     </div>
     <br>
-    <div class="container">
+    <div  class="contact-box">
         <br>
         <table class="table table-hover table-striped" id="tabla" class="display">
-            <thead class="table-dark">
-                <tr>
+            <thead class="cabecera" >
+                <tr >
                 <td>Id_Muestra 
                 <div class="float-right"> <i class="fas fa-arrow-up"></i> 
             <i class="fas fa-arrow-down"></i>
 </div>
                     </td>
                     <td>Id_Examen </td>
-                    <td>URL </td>
+                    <td  >URL </td>
                     <td>Estado </td>
 
                 </tr>
@@ -56,7 +57,7 @@
                     <tr>
                         <td> <?= $muestra->getById($mye->getId_Muestra())->getReferencia() ?> </td>
                         <td> <?= $examen->getById($mye->getId_Examen())->getNombre_Examen() ?> </td>
-                        <td> <a> <?= $mye->getURL_Resultado() ?> </a></td>
+                        <td> <a href="URL"> <?= $mye->getURL_Resultado() ?> </a></td>
                         <td> <?= $mye->getEstado() ?> </td>
 
                         </td>

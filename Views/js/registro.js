@@ -6,9 +6,13 @@ var Correo_Electronico = document.getElementById('Correo_Electronico');
 var Correo_Electronico2 = document.getElementById('Correo_Electronico2');
 var Contrasena_Usuario =document.getElementById('Contrasena_Usuario');
 var Contrasena_Usuario2 =document.getElementById('Contrasena_Usuario2');
+var Id_RH =document.getElementById('Id_RH');
 
 var error =document.getElementById('error');
+var mensaje =document.getElementById('mensaje');
+var mensaje =document.getElementById('mensaje');
 error.style.color ='red';
+mensaje.style.color ='red';
 
 
 
@@ -25,6 +29,8 @@ $("#Contrasena_Usuario").on ("keyup", function(){
     var pass =$("#Contrasena_Usuario").val();
 
     if(mayus.test(pass)&& special.test(pass)&& numeros.test(pass) && lower.test(pass) && len.test(pass)){
+
+        mensaje.style.color ='green';
         $("#mensaje").text("segura");
     }else{
         $("#mensaje").text("insegura");
@@ -81,6 +87,13 @@ function enviarFormulario() {
                return false;  
                  
            }
+
+           if (Id_RH.value === null  || Id_RH.value === '' ){
+            mensajesError.push('Ingresa tu RH')
+            error.innerHTML= mensajesError.join(' ')
+            return false;  
+              
+        }
            if (Correo_Electronico.value === null  || Correo_Electronico.value === '' ){
                mensajesError.push('Ingresa tu Correo Electronico')
                error.innerHTML= mensajesError.join(' ')

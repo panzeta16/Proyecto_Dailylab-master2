@@ -23,7 +23,7 @@ if(!isset($_SESSION['user'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/vistas.js"></script>
+    
 
 <!--jquery -->
 
@@ -66,10 +66,10 @@ if(!isset($_SESSION['user'])){
 
           <!--barra de busqueda -->
 
+ 
+   
+   
 
-          <form autocomplete="on" class="buscar">
-            
-          </form>
 
            <!--logo -->
           <div class="logo_name">
@@ -94,22 +94,24 @@ if(!isset($_SESSION['user'])){
       <!--barra lateral -->
    
       <div class="sidebar">
-          <div class="profile">
+          <div class="profile" >
              
-            <i class='fas fa-user-cog' style='color:#fdfdfd' ></i>
-            
-            <h3>
+          <i class='bx bxs-user-circle'  ></i>
+         
+            <h5>
                   Bienvenid@
                   <?=
-                   $_SESSION['user']->getCorreo_Electronico();
+                   $_SESSION['user']->getNombres_Usuario();
                    
                  
                   ?>
                  
-            </h3>
+            </h5>
+
             
               <p> 
-            Paciente
+
+              Rol: Paciente
               </p> 
           </div>
 
@@ -173,7 +175,7 @@ if(!isset($_SESSION['user'])){
      </div>
 
            <!--contenido de la pagina -->
-
+           <script src="views/js/vistas.js"></script>
      
 
       

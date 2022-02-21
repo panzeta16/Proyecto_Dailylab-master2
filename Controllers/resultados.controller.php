@@ -33,7 +33,7 @@ function resultados()// arreglar
     
     require "Views/paciente/header.php";
     require "Views/paciente/resultados.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
     
 
 }

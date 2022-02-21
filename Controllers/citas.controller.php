@@ -42,7 +42,7 @@ class CitasController
 
     require "Views/Enfermero/header.php";
     require "Views/Enfermero/menu.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   function subirResult()
@@ -79,7 +79,7 @@ class CitasController
     /////////////////////////
     require "Views/Enfermero/header.php";
     require "Views/Enfermero/subirResult.php";
-    require "Views/footer.php";
+   // require "Views/footer.php";
   }
 
   function guardarResult()
@@ -116,7 +116,7 @@ class CitasController
 
     require "Views/Enfermero/header.php";
     require "Views/Enfermero/tomasEnf.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   function Menu() // este es el menu de citas que ve el paciente
@@ -132,7 +132,7 @@ class CitasController
 
     require "Views/paciente/header.php";
     require "Views/paciente/menu.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
 
@@ -148,7 +148,7 @@ class CitasController
 
     require "Views/empleado/header.php";
     require "Views/empleado/listCitas.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   function viewHistorial()
@@ -164,7 +164,7 @@ class CitasController
 
     require "Views/empleado/header.php";
     require "Views/empleado/viewHistorial.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   function viewHistRolPac()
@@ -183,7 +183,7 @@ class CitasController
     }
     require "Views/paciente/header.php";
     require "Views/paciente/historial.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
   function viewHistorialPac()
   {
@@ -199,7 +199,7 @@ class CitasController
     }
     require "Views/empleado/header.php";
     require "Views/empleado/viewHistorialPac.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
 
@@ -217,7 +217,7 @@ class CitasController
     }
     require "Views/paciente/header.php";
     require "Views/paciente/agendar.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   public function viewAgendarPac()
@@ -236,7 +236,7 @@ class CitasController
     }
     require "Views/empleado/header.php";
     require "Views/empleado/agendarPac.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
   }
 
   /*public function saveAgendar(){ //revisal aqui, hay un error y nose a que corresppnde esto
@@ -353,7 +353,7 @@ console.log('elige una fecha mayor al dia de hoy');</script>";
 
     require "Views/paciente/header.php";
     require "Views/paciente/menu.php";
-    require "Views/footer.php";
+   // require "Views/footer.php";
 
     /*  
     $muestra_examen = new Muestra_Examen(); //?

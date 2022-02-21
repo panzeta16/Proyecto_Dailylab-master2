@@ -45,8 +45,9 @@ body{
 	left: 0;
 	width: 150px;
 	height: 300%;
-	padding: 5px ;
+	padding: 7px ;
 	transition: all 0.5s ease;
+    margin-right: 10px;
 }
  .wrapper .sidebar .profile{
 	margin-bottom: 30px;
@@ -66,11 +67,14 @@ body{
 
     border-radius: 50%;
 	margin: 0 auto;
+    color: #f5f5f5;
 }
 
-.wrapper .sidebar .profile h3{
+.wrapper .sidebar .profile h5{
 	color: #ffffff;
 	margin: 10px 0 5px;
+    font-size: 14px;
+    
 }
 .wrapper .sidebar .profile p{
 	color: rgb(206, 240, 253);
@@ -117,15 +121,18 @@ body{
 }
 .wrapper .section .top_navbar{
     background-image: linear-gradient(45deg, #ffffff 100%, #28a9ff 0%);
-	height: 80px;
+	height: 100px;
 	display: flex;
 	align-items: center;
 	padding: 0 0px;
  
 }
 .wrapper .section .top_navbar .hamburger a{
+    width: 10px;
+    height: 10px;
 	font-size: 28px;
 	color: #2085f8;
+    padding-right: 5%;
 }
 .wrapper .section .top_navbar .hamburger a:hover{
 	color: #000000;
@@ -197,6 +204,7 @@ body{
 }
 .logo_name {
 
+    padding-left: 5%;
     font-size: 55px;
 
 
@@ -268,6 +276,9 @@ body{
     }
 
 }
+
+
+
 
 @media (max-width:450px){
     

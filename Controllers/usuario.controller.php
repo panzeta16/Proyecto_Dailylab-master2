@@ -46,7 +46,7 @@ function index()//
     $usuarios=$this->model->list();//$usuarios = $usuario->list();//objet de tipo list
     require "Views/empleado/header.php";
     require "Views/empleado/usuView.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
 }
 
 function recuperarPass(){
@@ -66,7 +66,7 @@ function verPerfil()//
     
     require "Views/paciente/header.php";
     require "Views/paciente/verPerfil.php";
-    require "Views/footer.php";
+   // require "Views/footer.php";
 }
 
 
@@ -205,7 +205,7 @@ function registroPac()
     }
     require "Views/empleado/header.php";
     require "Views/empleado/registroPac.php";
-    require "Views/footer.php";
+    //require "Views/footer.php";
 
 
 }

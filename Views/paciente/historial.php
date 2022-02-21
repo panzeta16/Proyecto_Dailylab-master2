@@ -6,11 +6,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
 <!-- esto va en cada tabla-->
+<link rel="stylesheet" href="Views/css/tablas.css">
 <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
 <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 <!-- esto va en cada tabla-->
+
+<script src='Views/js/dataTable.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>Historial</title>
 <h1> Historial </h1>
 
@@ -23,13 +27,20 @@
 </nav>
     </div>
 
-<div class="container">  
+    <div class= "container-fluid">
+<h8>En este espacio encontrarás tus citas agendadas activas hasta el día de hoy. Para ver las citas que ya pasaron dirigete a historial general</h8>
+</div>
+<div class="container"> 
+
+</div> 
 <br>
-<table class="table table-hover table-striped" id="tabla" class="display"> 
-    <thead class="table-dark">
+<div class="contact-box">  
+<br>
+<table class="table table-hover table-striped" id="tabla" class="display"><!-- Datatable -->
+    <thead class="table">
         <tr>
-        <td>Fecha 
-                <div class="float-right"> <i class="fas fa-arrow-up"></i> 
+        <td>ID 
+<div class="float-right"> <i class="fas fa-arrow-up"></i> <!-- Datatable -->
             <i class="fas fa-arrow-down"></i>
 </div>
                     </td>
@@ -63,6 +74,6 @@
 
 
     </div>
-    <script src='Views/js/dataTable.js'></script>
+    
     </body>
     </html>

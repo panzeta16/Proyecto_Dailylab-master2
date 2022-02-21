@@ -14,7 +14,7 @@ class SucursalController
     {
         $sucursales = $this->model->list();
         require "Views/paciente/header.php";
-        require "Views/footer.php";
+        //require "Views/footer.php";
     }
 /*
     public function form2(){

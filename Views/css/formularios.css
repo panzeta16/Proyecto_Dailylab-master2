@@ -13,49 +13,6 @@ body {
     background-color: var(--color-grey);
     color: var(--color-light);
     letter-spacing: .05rem;
-
-
-}
-
-
-.inputt{
-
-    position: relative;
-
-   
-}
-
-.icon{
-
-    color: #191919;
-	position: absolute;
-	width: 70px;
-	height: 20px;
-	right: 12px;
-	top: 40%;
-	transform: translateY(-50%);
-    float: right;
-
-}
-
-.icon:hover{
-
-    cursor: pointer;
-    color: #197cee;
-
-    
-}
-
-
-.icon_mensaje{
-  
-	position: absolute;
-	width: 70px;
-	height: 20px;
-	right: 12px;
-	top: 50%;
-	transform: translateY(-50%);
-    float: right;
 }
 .Id_Rol{
     background-color: var(--color-dark-xx);
@@ -70,11 +27,15 @@ body {
     height: 58px;
     width: 40px;
     display: inline-table;
-
-    
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
     color: #333;
-   
-
+    border-radius: 50%;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
   }
   .seña:hover{
     cursor: pointer;
@@ -111,13 +72,10 @@ body {
 
 .p-6 {
     padding: 2rem 3rem;
+    padding-right: 12px;
 }
 
-.contact-box {
 
-  
-    
-}
 
 .btn {
     font-weight: 400;
@@ -125,6 +83,7 @@ body {
     border-radius: 5rem;
     min-width: 10rem;
     background:rgba(20, 140, 238, 0.856);
+    color: #197cee;
 }
 
 .btn-outline-dark {
@@ -137,13 +96,10 @@ body {
     border: 2px solid var(--color-dark-x);
     border-radius: 20px;
     padding: 0.5rem 1rem;
-    
-
-
 }
 
 .register-bg {
-    background-image: url("../multimedia/hero.jpg");
+    background-image: url("");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -152,9 +108,6 @@ body {
 .testiomonial {
     bottom: 10px
 }
-
-/*ventana modal*/
-
 
 @media (max-width: 575.98px) {
     .p-6 {

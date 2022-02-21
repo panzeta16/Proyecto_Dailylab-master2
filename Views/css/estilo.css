@@ -8,11 +8,7 @@
 text-decoration: none;
 
 }
-body{
-    font-family: 'Arial',sans-serif;
-    font-size: 16px;
-    background: #f2f2f2;
-}
+
 
 .bubble{
     font-family: "Bubble Bobble";
@@ -39,7 +35,13 @@ h2{
     font-weight: bold;
     color: #555;
 }
+.profile i{
 
+    color: #ccc;
+
+  
+
+}
 .barra__buscador{
     width: 100%;
     margin-top: 50px;

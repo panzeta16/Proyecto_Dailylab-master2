@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 -->  
 <!-- esto va en cada tabla-->
+<link rel="stylesheet" href="Views/css/tablas.css">
 <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
 <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 <!-- esto va en cada tabla-->
@@ -39,10 +40,10 @@
 
 </div> 
 <br>
-<div class="container">  
+<div class="contact-box">  
 <br>
 <table class="table table-hover table-striped" id="tabla" class="display"><!-- Datatable -->
-    <thead class="table-dark">
+    <thead class="table">
         <tr>
         <td>ID 
 <div class="float-right"> <i class="fas fa-arrow-up"></i> <!-- Datatable -->
